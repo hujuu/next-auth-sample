@@ -1,4 +1,4 @@
-import type { OAuthConfig, OAuthUserConfig } from "."
+import type { OAuthConfig, OAuthUserConfig } from "next-auth/providers"
 
 /** @see https://docs.github.com/en/rest/users/users#get-the-authenticated-user */
 export interface DribbbleProfile extends Record<string, any> {

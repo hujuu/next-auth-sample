@@ -4,6 +4,7 @@ import GithubProvider from "next-auth/providers/github"
 import TwitterProvider from "next-auth/providers/twitter"
 import Auth0Provider from "next-auth/providers/auth0"
 import DribbbleProvider from "../../../src/dribbble";
+import LineProvider from "next-auth/providers/line";
 
 // For more information on each option (and a full list of options) go to
 // https://next-auth.js.org/configuration/options
@@ -31,6 +32,10 @@ export const authOptions: NextAuthOptions = {
     DribbbleProvider({
       clientId: process.env.DRIBBBLE_ID!,
       clientSecret: process.env.DRIBBBLE_SECRET!,
+    }),
+    LineProvider({
+      clientId: process.env.LINE_CLIENT_ID!,
+      clientSecret: process.env.LINE_CLIENT_SECRET!
     }),
   ],
   theme: {
